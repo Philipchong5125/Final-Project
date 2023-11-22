@@ -58,10 +58,10 @@ function rollDices(){
     three = Math.round(Math.random()*5) + 1;
     four  = Math.round(Math.random()*5) + 1;
 
-    dice1.src = "code/images/dice-" + one   + ".png";
-    dice2.src = "code/images/dice-" + two   + ".png";
-    dice3.src = "code/images/dice-" + three + ".png";
-    dice4.src = "code/images/dice-" + four  + ".png";
+    dice1.src = "../images/dice-" + one   + ".png";
+    dice2.src = "../images/dice-" + two   + ".png";
+    dice3.src = "../images/dice-" + three + ".png";
+    dice4.src = "../images/dice-" + four  + ".png";
 
     if(one === 1)
     {
