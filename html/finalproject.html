@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <title>Dice Game</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <script src="../script/finalproject.js" defer></script>
+    </head>
+    <body class="grey">
+        <main>
+            <nav class="navbar">
+                <h2>Philip's Dice game</h2>
+                <button class="btn btn-sm btn-outline-secondary" type="button"
+                    style="margin-right:10px; border: 1px yellowgreen solid; color: yellowgreen;" id="how-play">How to
+                    play</button>
+            </nav>
+        
+            <div id="pop-rules">
+                <h3>How to play:</h3>
+                <p>Press the <strong>roll dice button </strong>to roll the dice.</p>
+                <p>Press the <strong>new game button </strong>to start a new game. </p>
+                <p><strong>The player with the highest score after 3 rounds wins.</strong></p>
+                <h3>Game rules:</h3>
+                <ul>
+                    <li>If any of the players two dice comes up as a value of 1, then the score for that round for the player is 0. 
+                        eg: if the player rolls a 6 and 1, they get a score of <strong>0</strong>.</li>
+        
+                    <li>If the player rolls a pair of the same numbers then the players score is the total of the two values of the dice
+                        multiplied by two. eg: if the player rolls 5 and 5, their score is calculated like this:<strong>(5 +
+                            5) *2 = 20.</strong></li>
+        
+                    <li>If the player rolls any other combination of dice other than the ones mentioned above
+                        then the player's score is the total value of the two dice. eg: the player rolls a 3 and 2, the
+                        score would be calculated like this: <strong>3 + 2 = 5.</strong></li>
+                </ul>
+                <div id="close-box" style="text-align: center;">
+                    <button class="main_btn" id="demo1">Continue</button>
+                </div>
+            </div>
+        
+            <article class="main">
+                <div class="box1">
+                    <h1>Player 1</h1>
+                    <div id="box1-1">
+                        <img src="../images/dice1.png" width="30%" id="dice1-1">
+                        <img src="../images/dice1.png" width="30%" id="dice1-2">
+                    </div>
+                    <div id="box1-2">
+                        <h6>Current Score Player 1: <span id="current-score1" style="color: black;"></span>
+                        </h6>
+                        <h6>Total Score Player 1: <span id="total-score1" style="color: black;"></span>
+                        </h6>
+                    </div>
+                </div>
+                <div class="box2">
+                    <h1>Player 2</h1>
+                    <div id="box2-1">
+                        <img src="../images/dice1.png" width="30%" id="dice2-1">
+                        <img src="../images/dice1.png" width="30%" id="dice2-2">
+                    </div>
+                    <div id="box2-2">
+                        <h6>Current Score Player 2: <span id="current-score2" style="color: black;"></span>
+                        </h6>
+                        <h6>Total Score Player 2: <span id="total-score2" style="color: black;"></span>
+                        </h6>
+                    </div>
+                </div>
+                <article class="buttons">
+                    <button id="new-game" class="main_btn">Reset</button>
+                    <button id="new-dice" class="main_btn">Roll</button>
+                </article>
+            </article>
+        
+            <section class="final-window">
+                <div id="win-popup">
+                    <img src="../images/winner.gif" alt="Computer man" style="width:100%;">
+                    <p>You win! Press REST to retry</p>
+                </div>
+        
+                <div id="lost-popup">
+                    <img src="../images/game-over.gif" alt="Computer man" style="width:100%;">
+                    <p>You lost! Press REST to retry</p>
+                </div>
+        
+                <div id="draw-popup">
+                    <img src="../images/draw.gif" alt="Computer man" style="width:100%;">
+                    <p>You both got same score! This is a draw! Press REST to retry</p>
+                </div>
+            </section>    
+        </main>
+    </body>
+</html>
