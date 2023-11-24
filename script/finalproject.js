@@ -38,6 +38,7 @@ closePopUp.addEventListener("click", function (){
 })
 
 
+//Initiate a new game
 newGame.addEventListener("click", function(){
     location.reload();
 })
