@@ -72,6 +72,7 @@ body {
         margin: 5px;
         background-color: $base_color;
         box-shadow: 0px 0px 20px black;
+    
 
         #box1-1,
         #box2-1 {
@@ -84,12 +85,12 @@ body {
             }
         }
     }
+}
 
     .buttons {
         margin-top: 40px;
         text-align: center;
     }
-}
 
 #pop-rules {
     margin: 100px 30%;
