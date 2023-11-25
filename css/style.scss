@@ -1,7 +1,163 @@
+@import url('https://fonts.cdnfonts.com/css/games');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Righteous');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,700|Montserrat:700');
+
 //SASS variables
-$primary_color   : greenyellow;
-$secondary_color : #333;
-$wrapper_color   : darkgrey;
-$base_color      : rgba(255, 255, 255, 0.30);
+$primary_color   : rgb(47, 238, 255);
+$secondary_color : #33333394;
+$wrapper_color   : rgb(169, 169, 169);
+$base_color      : rgba(255, 255, 255, 0.037);
 $main_border     : 1px black solid;
 $main_font       : 'Josefin Sans',sans-serif;
+
+//glassy continer for pop-up windows
+@mixin continer {
+    background: rgba(255, 255, 255, 0.404);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.385);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    border: 1px solid $base_color;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h6 {
+    font-family: 'Games', sans-serif;
+    color: $primary_color;
+}
+
+html {
+    background-color: $secondary_color;
+}
+
+body {
+    background-color: $secondary_color;
+
+}
+
+.navbar {
+    background-image: url('../images/navbar.jpeg');
+    background-color: #33333331;
+    box-shadow: 0px 0px 10px $primary_color;
+    padding: 30px 10px;
+    justify-content: center;
+}
+
+.main {
+    padding: 100px 0px;
+    text-align: center;
+    color: white;
+    background-color: $secondary_color;
+
+    .box1,
+    .box2 {
+        border: $main_border;
+        padding: 10px;
+        display: inline-block;
+        width: 45%;
+        text-align: center;
+        margin: 5px;
+        background-color: $base_color;
+        box-shadow: 0px 0px 20px black;
+
+        #box1-1,
+        #box2-1 {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+
+            img {
+                margin: 2%;
+            }
+        }
+    }
+
+    .buttons {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+#pop-rules {
+    margin: 100px 30%;
+    border: 3px solid $wrapper_color;
+    font-family: $main_font;
+    @include continer;
+}
+
+#closePopup {
+    background-color: $primary_color;
+    display: inline-block;
+    text-align: center;
+}
+
+#lost-popup,
+#draw-popup,
+#win-popup {
+    display: none;
+    margin: 100px 30%;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Games', sans-serif;
+    color: black;
+    font-size: 2.5vw;
+    @include continer;
+}
+
+.main_btn {
+    border-radius: 5px;
+    border: $main_border;
+    padding: 5px 15px;
+    margin: 10px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.183);
+    font-family: $main_font;
+}
+
+.main_btn:focus,
+.main_btn:active,
+.main_btn:hover {
+    background-color: $wrapper_color;
+}
+
+.restBtn {
+    box-shadow: 0px 0px 20px $primary_color;
+    border: 1px $primary_color solid;
+    color: $primary_color;
+}
+
+.restRoll {
+    border: $secondary_color;
+    cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 800px) {
+    html {
+        -webkit-text-size-adjust: none;
+    }
+
+    #pop-rules,
+    #lost-popup,
+    #draw-popup,
+    #win-popup {
+        margin: 100px 40px;
+    }
+
+    img {
+        width: 40%;
+    }
+}
