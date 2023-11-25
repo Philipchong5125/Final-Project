@@ -45,14 +45,14 @@ newGame.addEventListener("click", function(){
 
 button.addEventListener("click", rollDices);
 
-let player1TotalScore = 0;
-let player2TotalScore = 0;
+let p1TotalScore = 0;
+let p2TotalScore = 0;
 let counter      = 0;
 
 function rollDices(){
 
-  let player1CurrentScore = "";
-  let player2CurrentScore = "";
+  let p1CurrentScore = "";
+  let p2CurrentScore = "";
 
     one   = Math.round(Math.random()*5) + 1;
     two   = Math.round(Math.random()*5) + 1;
@@ -64,49 +64,49 @@ function rollDices(){
     dice3.src = "../images/dice-" + three + ".png";
     dice4.src = "../images/dice-" + four  + ".png";
 
-    if(one === 1)
+    if(one == 1)
     {
-        player1CurrentScore = 0;
-    }else if(two === 1)
+        p1CurrentScore = 0;
+    }else if(two == 1)
     {
-        player1CurrentScore = 0;
+        p1CurrentScore = 0;
     }else{
-        player1CurrentScore = one + two;
+        p1CurrentScore = one + two;
     }
-    if(one === two)
+    if(one == two)
     {
-        player1CurrentScore = (one + two) * 2;
+        p1CurrentScore = (one + two) * 2;
     }
-    if(three === 1)
+    if(three == 1)
     {
-        player2CurrentScore = 0;
+        p2CurrentScore = 0;
         
-    }else if(four === 1)
+    }else if(four == 1)
     {
-        player2CurrentScore = 0;
+        p2CurrentScore = 0;
     }else
     {
-        player2CurrentScore = three + four;
+        p2CurrentScore = three + four;
     }
-    if(three === four)
+    if(three == four)
     {
-        player2CurrentScore = (three + four) * 2;
+        p2CurrentScore = (three + four) * 2;
     }
 
-    player1TotalScore = player1TotalScore + player1CurrentScore;
-    player2TotalScore = player2TotalScore + player2CurrentScore;
+    p1TotalScore = p1TotalScore + p1CurrentScore;
+    p2TotalScore = p2TotalScore + p2CurrentScore;
   
-    playerOneCurrentScore.innerHTML = `${player1CurrentScore}`;
-    playerOneTotalScore.innerHTML   = `${player1TotalScore}`;
-    playerTwoCurrentScore.innerHTML = `${player2CurrentScore}`;
-    playerTwoTotalScore.innerHTML   = `${player2TotalScore}`;
+    playerOneCurrentScore.innerHTML = `${p1CurrentScore}`;
+    playerOneTotalScore.innerHTML   = `${p1TotalScore}`;
+    playerTwoCurrentScore.innerHTML = `${p2CurrentScore}`;
+    playerTwoTotalScore.innerHTML   = `${p2TotalScore}`;
     
     counter++;
     
     if(counter >= 3){
         button.disabled = true;
       
-      if(player1TotalScore > player2TotalScore){
+      if(p1TotalScore > p2TotalScore){
 
         $("#win-popup").css({opacity:'0'});
         $("#win-popup").stop().animate({opacity:'1'},1000);
@@ -116,7 +116,7 @@ function rollDices(){
         
         
 
-      }else if(player2TotalScore > player1TotalScore){
+      }else if(p2TotalScore > p1TotalScore){
 
         $("#lost-popup").css({opacity:'0'});
         $("#lost-popup").stop().animate({opacity:'1'},1000);
@@ -134,3 +134,4 @@ function rollDices(){
       }
     }
 }
+
