@@ -19,6 +19,11 @@ const winPopup   = document.getElementById('win-popup')
 const lostPopup  = document.getElementById('lost-popup')
 const drawPopup  = document.getElementById('draw-popup')
 
+document.addEventListener('click', function(){
+    var fadeInElement = document.getElementById('fade-in-element');
+    fadeInElement.classList.add('visible');
+});
+
 popUp1.style.display = 'none'
 
 howToPlay.addEventListener("click", function (){
